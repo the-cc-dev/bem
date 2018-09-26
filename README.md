@@ -1,6 +1,6 @@
 # BEM
 
-![mail](https://user-images.githubusercontent.com/499192/37464248-1282c40a-2858-11e8-801c-571c1dedf310.png)
+![bem](https://user-images.githubusercontent.com/499192/46089793-918a5600-c1af-11e8-9728-cdcf15991b48.png)
 
 > A [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) (Block Element Modifier) plugin for [WordPlate](https://wordplate.github.io/).
 
