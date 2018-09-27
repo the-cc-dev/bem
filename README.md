@@ -22,17 +22,6 @@ This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` a
                 </li>
             </ul>
         </li>
-        <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89">
-            <a href="https://wordplate.com/sample-page/">Privacy</a>
-            <ul class="sub-menu">
-                <li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118">
-                    <a href="https://wordplate.com/testing/">Space Jam</a>
-                </li>
-                <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90">
-                    <a href="https://wordplate.com/sample-page/">Acme Industries</a>
-                </li>
-            </ul>
-        </li>
     </ul>
 </div>
 ```
@@ -49,17 +38,6 @@ This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` a
             </li>
             <li class="navigation__item">
                 <a href="https://wordplate.com/" class="navigation__link navigation__link--active">Pricing</a>
-            </li>
-        </ul>
-    </li>
-    <li class="navigation__item navigation__item--parent navigation__item--top-level">
-        <a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--top-level">Privacy</a>
-        <ul class="navigation__children">
-            <li class="navigation__item">
-                <a href="https://wordplate.com/testing/" class="navigation__link">Space Jam</a>
-            </li>
-            <li class="navigation__item">
-                <a href="https://wordplate.com/sample-page/" class="navigation__link">Acme Industries</a>
             </li>
         </ul>
     </li>
