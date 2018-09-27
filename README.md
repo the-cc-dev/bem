@@ -11,21 +11,26 @@ This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` a
 ```html
 <div class="menu-navigation-container">
     <ul id="menu-navigation" class="menu">
-        <li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-93"><a href="https://wordplate.com/sample-page/">Acme</a>
+        <li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-93">
+            <a href="https://wordplate.com/sample-page/">Acme</a>
             <ul class="sub-menu">
-                <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://wordplate.com/sample-page/">About</a></li>
-                <li id="menu-item-87" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-87"><a href="https://wordplate.com/">Pricing</a></li>
+                <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88">
+                    <a href="https://wordplate.com/sample-page/">About</a>
+                </li>
+                <li id="menu-item-87" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-87">
+                    <a href="https://wordplate.com/">Pricing</a>
+                </li>
             </ul>
         </li>
-        <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89"><a href="https://wordplate.com/sample-page/">Privacy</a>
+        <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89">
+            <a href="https://wordplate.com/sample-page/">Privacy</a>
             <ul class="sub-menu">
-                <li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="https://wordplate.com/testing/">Space Jam</a></li>
-                <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="https://wordplate.com/sample-page/">Acme Industries</a></li>
-            </ul>
-        </li>
-        <li id="menu-item-121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-121"><a href="https://wordplate.com/sample-page/">Terms &amp; Conditions</a>
-            <ul class="sub-menu">
-                <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="https://wordplate.com/sample-page/testing/">Testing</a></li>
+                <li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118">
+                    <a href="https://wordplate.com/testing/">Space Jam</a>
+                </li>
+                <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90">
+                    <a href="https://wordplate.com/sample-page/">Acme Industries</a>
+                </li>
             </ul>
         </li>
     </ul>
@@ -36,21 +41,26 @@ This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` a
 
 ```html
 <ul class="navigation__list">
-    <li class="navigation__item navigation__item--parent navigation__item--top-level"><a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--ancestor navigation__link--top-level">Acme</a>
+    <li class="navigation__item navigation__item--parent navigation__item--top-level">
+        <a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--ancestor navigation__link--top-level">Acme</a>
         <ul class="navigation__children">
-            <li class="navigation__item"><a href="https://wordplate.com/sample-page/" class="navigation__link">About</a></li>
-            <li class="navigation__item"><a href="https://wordplate.com/" class="navigation__link navigation__link--active">Pricing</a></li>
+            <li class="navigation__item">
+                <a href="https://wordplate.com/sample-page/" class="navigation__link">About</a>
+            </li>
+            <li class="navigation__item">
+                <a href="https://wordplate.com/" class="navigation__link navigation__link--active">Pricing</a>
+            </li>
         </ul>
     </li>
-    <li class="navigation__item navigation__item--parent navigation__item--top-level"><a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--top-level">Privacy</a>
+    <li class="navigation__item navigation__item--parent navigation__item--top-level">
+        <a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--top-level">Privacy</a>
         <ul class="navigation__children">
-            <li class="navigation__item"><a href="https://wordplate.com/testing/" class="navigation__link">Space Jam</a></li>
-            <li class="navigation__item"><a href="https://wordplate.com/sample-page/" class="navigation__link">Acme Industries</a></li>
-        </ul>
-    </li>
-    <li class="navigation__item navigation__item--parent navigation__item--top-level"><a href="https://wordplate.com/sample-page/" class="navigation__link navigation__link--top-level">Terms &amp; Conditions</a>
-        <ul class="navigation__children">
-            <li class="navigation__item"><a href="https://wordplate.com/sample-page/testing/" class="navigation__link">Testing</a></li>
+            <li class="navigation__item">
+                <a href="https://wordplate.com/testing/" class="navigation__link">Space Jam</a>
+            </li>
+            <li class="navigation__item">
+                <a href="https://wordplate.com/sample-page/" class="navigation__link">Acme Industries</a>
+            </li>
         </ul>
     </li>
 </ul>
