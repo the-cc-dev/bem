@@ -4,7 +4,7 @@
 
 > A [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) (Block Element Modifier) plugin for [WordPlate](https://wordplate.github.io/).
 
-This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` and `wp_nav_menu` functions.
+This plugin will clean up the HTML attributes from WordPress's `wp_list_pages` and `wp_nav_menu` functions. It will convert WordPress element classes with BEM flavoured ones.
 
 **Before:**
 
