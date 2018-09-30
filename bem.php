@@ -73,21 +73,21 @@
  add_filter('page_css_class', function ($classes, $page, $depth, $args, $current_page) {
      $menuClass = $args['menu_class'] ?? 'menu';
 
-     $classes = [$menuClass.'__item'];
+     $items = [$menuClass.'__item'];
 
      if (in_array('page_item_has_children', $classes, true)) {
-         $classes[] = $menuClass.'__item--parent';
+         $items[] = $menuClass.'__item--parent';
      }
 
      if (in_array('current_page_ancestor', $classes, true)) {
-         $classes[] = $menuClass.'__item--ancestor';
+         $items[] = $menuClass.'__item--ancestor';
      }
 
      if ($depth === 0) {
-         $classes[] = $menuClass.'__item--top-level';
+         $items[] = $menuClass.'__item--top-level';
      }
 
-     return $classes;
+     return $items;
  }, 10, 5);
 
  // Filter wp_list_pages anchors class attribute.
