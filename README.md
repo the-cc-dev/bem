@@ -62,14 +62,14 @@ Then login to the WordPress administrator dashboard and active the BEM plugin.
 
 ##### `wp_nav_menu`
 
-To print a navigation menu you may use the built-in WordPress [`wp_nav_menu`](https://developer.wordpress.org/reference/functions/wp_nav_menu/) function:
+To print a navigation menu you may use the built-in WordPress [`wp_nav_menu`](https://developer.wordpress.org/reference/functions/wp_nav_menu/) function. Remember to add the `block` argument to the array.
 
 ```php
 <nav class="navigation">
     <?php wp_nav_menu([
+        'block' => 'navigation',
         'container' => false,
         'items_wrap' => '<ul class="navigation__list">%3$s</ul>',
-        'menu_class' => 'navigation',
         'theme_location' => 'primary-menu',
     ]); ?>
 </nav>
@@ -77,13 +77,13 @@ To print a navigation menu you may use the built-in WordPress [`wp_nav_menu`](ht
 
 ##### `wp_list_pages`
 
-To print a pages menu you may use the built-in WordPress [`wp_list_pages`](https://developer.wordpress.org/reference/functions/wp_list_pages/) function:
+To print a pages menu you may use the built-in WordPress [`wp_list_pages`](https://developer.wordpress.org/reference/functions/wp_list_pages/) function. Remember to add the `block` argument to the array.
 
 ```php
 <ul class="sidebar__list">
   <?php wp_list_pages([
+      'block' => 'sidebar',
       'title_li' => '',
-      'menu_class' => 'sidebar',
   ]); ?>
 </ul>
 ```

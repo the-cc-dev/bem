@@ -14,7 +14,7 @@
  * Description: A BEM (Block Element Modifier) plugin for WordPlate.
  * Author: WordPlate
  * Author URI: https://wordplate.github.io
- * Version: 0.1.0
+ * Version: 0.3.0
  * Plugin URI: https://github.com/wordplate/bem#readme
  */
 
@@ -22,16 +22,22 @@
 
  // Filter navigation elements class attribute.
  add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+     if (!property_exists($args, 'block')) {
+         throw new InvalidArgumentException('Missing BEM configuration key [block].');
+     }
+
+     $args->menu_class = $args->block;
+
      $items = [
-         $args->menu_class.'__item',
+         $args->block.'__item',
      ];
 
      if (in_array('menu-item-has-children', $classes, true)) {
-         $items[] = $args->menu_class.'__item--parent';
+         $items[] = $args->block.'__item--parent';
      }
 
      if ($depth === 0) {
-         $items[] = $args->menu_class.'__item--top-level';
+         $items[] = $args->block.'__item--top-level';
      }
 
      return $items;
@@ -39,28 +45,38 @@
 
  // Filter navigation submenu class attribute.
  add_filter('nav_menu_submenu_css_class', function ($classes, $args, $depth) {
+     if (!property_exists($args, 'block')) {
+         throw new InvalidArgumentException('Missing property block for BEM.');
+     }
+
      return [
-         $args->menu_class.'__children',
+         $args->block.'__children',
      ];
  }, 10, 3);
 
  // Filters navigation menu link class attribute.
  add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
-     $atts['class'] = $args->menu_class.'__link';
+     if (!property_exists($args, 'block')) {
+         throw new InvalidArgumentException('Missing BEM configuration key [block].');
+     }
+
+     $args->menu_class = $args->block;
+
+     $atts['class'] = $args->block.'__link';
 
      if (
          in_array('current-page-ancestor', $item->classes, true) ||
          in_array('current-menu-ancestor', $item->classes, true)
      ) {
-         $atts['class'] .= ' '.$args->menu_class.'__link--ancestor';
+         $atts['class'] .= ' '.$args->block.'__link--ancestor';
      }
 
      if (in_array('current-menu-item', $item->classes, true)) {
-         $atts['class'] .= ' '.$args->menu_class.'__link--active';
+         $atts['class'] .= ' '.$args->block.'__link--active';
      }
 
      if ($depth === 0) {
-         $atts['class'] .= ' '.$args->menu_class.'__link--top-level';
+         $atts['class'] .= ' '.$args->block.'__link--top-level';
      }
 
      return $atts;
@@ -71,20 +87,24 @@
 
  // Filter wp_list_pages list items class attribute.
  add_filter('page_css_class', function ($classes, $page, $depth, $args, $current_page) {
-     $menuClass = $args['menu_class'] ?? 'menu';
+     if (!isset($args['block'])) {
+         throw new InvalidArgumentException('Missing BEM configuration key [block].');
+     }
 
-     $items = [$menuClass.'__item'];
+     $block = $args['block'] ?? 'menu';
+
+     $items = [$block.'__item'];
 
      if (in_array('page_item_has_children', $classes, true)) {
-         $items[] = $menuClass.'__item--parent';
+         $items[] = $block.'__item--parent';
      }
 
      if (in_array('current_page_ancestor', $classes, true)) {
-         $items[] = $menuClass.'__item--ancestor';
+         $items[] = $block.'__item--ancestor';
      }
 
      if ($depth === 0) {
-         $items[] = $menuClass.'__item--top-level';
+         $items[] = $block.'__item--top-level';
      }
 
      return $items;
@@ -92,7 +112,7 @@
 
  // Filter wp_list_pages anchors class attribute.
  add_filter('page_menu_link_attributes', function ($atts, $page, $depth, $args, $currentPage) {
-     $menuClass = $args['menu_class'] ?? 'menu';
+     $menuClass = $args['block'] ?? 'menu';
 
      $atts['class'] = $menuClass.'__link';
 
