@@ -1,8 +1,13 @@
 {
     "name": "wordplate/bem",
-    "description": "A BEM (Block Element Modifier) plugin for WordPlate",
-    "keywords": ["wordplate", "bem", "wordpress", "plugin"],
     "type": "wordpress-plugin",
+    "description": "A BEM (Block Element Modifier) plugin for WordPlate",
+    "keywords": [
+        "wordplate",
+        "bem",
+        "wordpress",
+        "plugin"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +22,7 @@
     "config": {
         "preferred-install": "dist"
     },
-    "extra":{
+    "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
